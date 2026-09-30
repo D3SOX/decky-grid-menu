@@ -10,7 +10,17 @@ store retain their normal layout. Disabling or unloading Grid Menu restores
 the list immediately. No Python backend, root access, or network requests are
 required by the plugin.
 
-## Build and install
+## Install
+
+Download the `decky-grid-menu-<version>.zip` asset from the
+[latest release](https://github.com/D3SOX/decky-grid-menu/releases/latest)
+and copy it to your Steam Deck. In Decky's settings, enable Developer Mode,
+then use **Install Plugin from ZIP** to select it.
+
+Choose the attached plugin ZIP from **Assets**; GitHub's **Source code** archives
+do not contain the built plugin.
+
+## Build from source
 
 ```sh
 bun install --frozen-lockfile
@@ -21,12 +31,18 @@ bun run build
 bun run package
 ```
 
-Copy `out/decky-grid-menu-1.0.1.zip` to your Steam Deck. In Decky's settings,
-enable Developer Mode, then use **Install Plugin from ZIP** to select it.
+Install the generated `out/decky-grid-menu-<version>.zip` using the steps above.
 
 Alternatively, copy `plugin.json`, `package.json`, and `dist/index.js` into
 `~/homebrew/plugins/decky-grid-menu/`, keeping `index.js` inside `dist/`, and
 restart Decky Loader.
+
+## Releases
+
+Update `version` in `package.json`, commit the change, then push a matching
+version tag (for example, `v1.0.1`). The release workflow checks the version,
+runs type checking, formatting checks and tests, builds the plugin, and publishes
+a GitHub release with the installable ZIP attached.
 
 ## Compatibility and device checks
 

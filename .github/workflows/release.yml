@@ -1,0 +1,61 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: "1.4.2"
+
+      - name: Verify release version
+        id: version
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          bun run - >> "$GITHUB_OUTPUT" <<'JS'
+          const { version } = await Bun.file("package.json").json();
+          if (process.env.RELEASE_TAG !== `v${version}`) {
+            throw new Error("Release tag must match the package.json version");
+          }
+          console.log(`zip=out/decky-grid-menu-${version}.zip`);
+          JS
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Check source
+        run: |
+          bun run typecheck
+          bun run lint
+          bun test
+
+      - name: Build and package
+        run: |
+          bun run build
+          bun run package
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_ZIP: ${{ steps.version.outputs.zip }}
+        run: |
+          gh release create "$RELEASE_TAG" "$RELEASE_ZIP" \
+            --verify-tag \
+            --title "Grid Menu $RELEASE_TAG" \
+            --generate-notes \
+            --notes "Download the attached decky-grid-menu ZIP and install it using Decky's Install Plugin from ZIP option."
