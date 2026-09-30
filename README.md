@@ -4,6 +4,8 @@ A Decky plugin that arranges the main plugin menu into **three columns by defaul
 Open **Grid Menu** to choose two, three, or four columns, or turn the grid off.
 Settings are saved locally in Steam's browser storage and survive restarts.
 
+<img src="docs/images/grid-menu.png" alt="Decky menu showing plugins in three columns on a Steam Deck" width="360">
+
 The layout uses the original Decky buttons, icons, plugin order, update badges,
 and hidden/disabled-plugin summaries. Plugin pages, Decky's settings, and the
 store retain their normal layout. Disabling or unloading Grid Menu restores

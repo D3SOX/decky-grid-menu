@@ -14,6 +14,11 @@ export const GRID_CSS = `
   padding: 0 !important;
 }
 
+/* Native field wrappers draw a separator for list rows. */
+[data-decky-grid="wrapper"]::after {
+  content: none !important;
+}
+
 [data-decky-grid="button"] {
   box-sizing: border-box !important;
   width: 100% !important;

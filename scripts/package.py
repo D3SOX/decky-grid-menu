@@ -5,7 +5,14 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 
 root = Path(__file__).resolve().parent.parent
-files = ["plugin.json", "package.json", "dist/index.js", "README.md", "LICENSE"]
+files = [
+    "plugin.json",
+    "package.json",
+    "dist/index.js",
+    "README.md",
+    "docs/images/grid-menu.png",
+    "LICENSE",
+]
 if not (root / "dist/index.js").is_file():
     raise SystemExit("Missing dist/index.js. Run bun run build before packaging.")
 
