@@ -1,0 +1,31 @@
+{
+  "name": "decky-grid-menu",
+  "version": "1.0.1",
+  "description": "A configurable column layout for Decky's plugin menu.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "typecheck": "tsc --noEmit",
+    "lint": "prettier --check .",
+    "test": "bun test",
+    "package": "python3 scripts/package.py"
+  },
+  "dependencies": {
+    "@decky/api": "^1.1.3",
+    "react-icons": "^5.3.0",
+    "tslib": "^2.7.0"
+  },
+  "devDependencies": {
+    "@decky/rollup": "^1.0.2",
+    "@decky/ui": "^4.12.1",
+    "@types/bun": "^1.3.0",
+    "@types/react": "19.1.1",
+    "@types/react-dom": "19.1.1",
+    "happy-dom": "^20.0.0",
+    "prettier": "^3.6.0",
+    "rollup": "^4.53.3",
+    "typescript": "^5.9.0"
+  }
+}

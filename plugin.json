@@ -1,0 +1,10 @@
+{
+  "name": "Grid Menu",
+  "author": "Nico",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": ["utilities", "interface"],
+    "description": "Show Decky plugins in a configurable grid. Three columns by default."
+  }
+}
