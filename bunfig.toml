@@ -1,3 +1,0 @@
-[install]
-# Keep Decky's build compiler separate from the project's TypeScript version.
-linker = "isolated"
