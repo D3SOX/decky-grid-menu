@@ -11,7 +11,7 @@
       },
       "devDependencies": {
         "@decky/rollup": "^1.0.2",
-        "@decky/ui": "^4.12.1",
+        "@decky/ui": "^4.15.1",
         "@types/bun": "^1.4.2",
         "@types/react": "19.3.0",
         "@types/react-dom": "19.3.0",
@@ -27,7 +27,7 @@
 
     "@decky/rollup": ["@decky/rollup@1.0.2", "", { "dependencies": { "@rollup/plugin-commonjs": "^26.0.1", "@rollup/plugin-json": "^6.1.0", "@rollup/plugin-node-resolve": "^15.2.3", "@rollup/plugin-replace": "^5.0.7", "@rollup/plugin-typescript": "^11.1.6", "merge-anything": "^6.0.2", "rollup": "^4.18.0", "rollup-plugin-delete": "^2.0.0", "rollup-plugin-external-globals": "^0.11.0", "rollup-plugin-import-assets": "^1.1.1", "tslib": "^2.6.3", "typescript": "^5.5.3" } }, "sha512-ixuHH3msw156ACbgWZi4hgccdzDBIuqYGOVja8sLX4lHFgaWUKji1vomDi7Dk1CamgjmKt+Dqf75Pezv2FB6Bw=="],
 
-    "@decky/ui": ["@decky/ui@4.12.1", "", {}, "sha512-kJOZ+PRJK15jR0N9/5s3NrMUjjgQSQ+UT4Fb+p18cdh08Ujzi617+0FJZc/x9RPIWj8s7aqkx3WvKa7YWUm72g=="],
+    "@decky/ui": ["@decky/ui@4.15.1", "", {}, "sha512-pIOpN9cm+90oaiQvLpAao8GfuflTC1tbZh1erMUKZ7IHeFYb/vrEhpI/v/avNWOySWFxGl0iVsDALvwIu2l1kg=="],
 
     "@isaacs/cliui": ["@isaacs/cliui@8.0.2", "", { "dependencies": { "string-width": "^5.1.2", "string-width-cjs": "npm:string-width@^4.2.0", "strip-ansi": "^7.0.1", "strip-ansi-cjs": "npm:strip-ansi@^6.0.1", "wrap-ansi": "^8.1.0", "wrap-ansi-cjs": "npm:wrap-ansi@^7.0.0" } }, "sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA=="],
 
