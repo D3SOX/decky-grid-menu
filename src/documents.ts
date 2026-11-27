@@ -1,4 +1,4 @@
-import { startGrid, type GridOptions } from "./grid";
+import { type GridOptions, startGrid } from "./grid";
 import type { Settings } from "./settings";
 
 export function watchMenuDocuments(

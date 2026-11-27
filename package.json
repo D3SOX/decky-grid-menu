@@ -8,7 +8,8 @@
   "scripts": {
     "build": "rollup -c",
     "typecheck": "tsc --noEmit",
-    "lint": "prettier --check .",
+    "lint": "biome check",
+    "format": "biome check --write",
     "test": "bun test",
     "package": "python3 scripts/package.py"
   },
@@ -18,13 +19,13 @@
     "tslib": "^2.9.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.9",
     "@decky/rollup": "^1.0.2",
     "@decky/ui": "^5.0.2",
     "@types/bun": "^1.4.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "happy-dom": "^21.0.4",
-    "prettier": "^3.10.1",
     "rollup": "^4.68.8",
     "typescript": "^6.0.3"
   }

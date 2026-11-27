@@ -2,10 +2,10 @@ import { definePlugin, toaster } from "@decky/api";
 import {
   DropdownItem,
   GamepadButton,
+  getGamepadNavigationTrees,
   PanelSection,
   PanelSectionRow,
   ToggleField,
-  getGamepadNavigationTrees,
 } from "@decky/ui";
 import { useState } from "react";
 import { FaTh } from "react-icons/fa";
@@ -14,10 +14,10 @@ import { watchMenuDocuments } from "./documents";
 import { focusNativeButton, type NavigationTree } from "./navigation";
 import {
   COLUMN_COUNTS,
-  STORAGE_KEY,
   isColumnCount,
   loadSettings,
   type Settings,
+  STORAGE_KEY,
 } from "./settings";
 
 function Content({

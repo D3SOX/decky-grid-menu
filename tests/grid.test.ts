@@ -15,8 +15,7 @@ describe("Decky menu layout", () => {
   beforeEach(() => {
     window = new Window();
     document = window.document as unknown as Document;
-    document.body.innerHTML =
-      menu() + `<div id="unrelated">${row("Other action")}</div>`;
+    document.body.innerHTML = `${menu()}<div id="unrelated">${row("Other action")}</div>`;
     state = {
       plugins: PLUGINS.map((name) => ({ name, content: {} })),
       hiddenPlugins: [],
