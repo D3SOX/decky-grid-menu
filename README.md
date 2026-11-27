@@ -49,9 +49,8 @@ a GitHub release with the installable ZIP attached.
 ## Compatibility and device checks
 
 Implementation is based on Decky Loader **v3.3.1** and the current official
-plugin template (`@decky/api` and `@decky/ui`). The internal menu APIs it uses are
-unchanged in the Decky 4.0 pre-release for the new Steam beta, but that combination
-has not been tested on a device yet. Decky has no public menu-layout
+plugin template (`@decky/api` and `@decky/ui`). It also works with the Decky
+**v4.0.0-pre1** pre-release on the new Steam client beta. Decky has no public menu-layout
 API, so this plugin reads its internal menu state and styles the existing menu
 DOM in Steam's actual Quick Access window, including menus rendered in a separate
 popup. It matches the full set of visible plugin buttons without relying on
@@ -70,7 +69,9 @@ updated both browser focus and Steam's native focus node. The user confirmed
 physical D-pad navigation and navigation sounds on the live update. The current
 code was rechecked the same way on SteamOS 3.9.5 with Decky 3.3.1 and the stable
 Steam client: 17 visible plugins in three columns, no horizontal overflow, D-pad
-movement including the header, and the plugin page title. Additional
+movement including the header, and the plugin page title. The same checks passed on
+SteamOS 3.9.7 beta with Decky 4.0.0-pre1 and the Steam client beta, including two
+and four columns. Additional
 manual acceptance checks:
 
 - Navigate every tile with the D-pad, open with A, and return with B.
