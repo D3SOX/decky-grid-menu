@@ -6,7 +6,6 @@ import {
   PanelSectionRow,
   ToggleField,
   getGamepadNavigationTrees,
-  staticClasses,
 } from "@decky/ui";
 import { useState } from "react";
 import { FaTh } from "react-icons/fa";
@@ -121,7 +120,6 @@ export default definePlugin(() => {
 
   return {
     name: "Grid Menu",
-    titleView: <div className={staticClasses.Title}>Grid Menu</div>,
     icon: <FaTh />,
     content: (
       <Content
